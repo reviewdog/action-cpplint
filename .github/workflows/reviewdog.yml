@@ -25,3 +25,4 @@ jobs:
           path: "." # Optional.
           pattern: "*.sh" # Optional.
           exclude: "./.git/*" # Optional.
+          shellcheck_flags: "--external-sources -e SC2086"
