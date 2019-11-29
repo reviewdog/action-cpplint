@@ -1,10 +1,10 @@
 # GitHub Action: Run cpplint with reviewdog
 
-[![Docker Image CI Status](https://github.com/srz-zumix/reviewdog-cpplint/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://github.com/srz-zumix/iutest/actions)
-[![Release](https://img.shields.io/github/release/srz-zumix/reviewdog-cpplint.svg?maxAge=43200)](https://github.com/srz-zumix/reviewdog-cpplint/releases)
+[![Docker Image CI Status](https://github.com/reviewdog/action-cpplint/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://github.com/reviewdog/action-cpplint/actions)
+[![Release](https://img.shields.io/github/release/reviewdog/action-cpplint.svg?maxAge=43200)](https://github.com/reviewdog/action-cpplint/releases)
 
-[![github-pr-check sample](https://user-images.githubusercontent.com/1439172/67361002-68025080-f5a2-11e9-97b7-530d0531edb4.png)](https://github.com/srz-zumix/reviewdog-cpplint/pull/4)
-[![github-pr-review sample](https://user-images.githubusercontent.com/1439172/67361077-9c760c80-f5a2-11e9-98e4-975052cd6fd4.png)](https://github.com/srz-zumix/reviewdog-cpplint/pull/4)
+[![github-pr-check sample](https://user-images.githubusercontent.com/1439172/67361002-68025080-f5a2-11e9-97b7-530d0531edb4.png)](https://github.com/reviewdog/action-cpplint/pull/2)
+[![github-pr-review sample](https://user-images.githubusercontent.com/1439172/67361077-9c760c80-f5a2-11e9-98e4-975052cd6fd4.png)](https://github.com/reviewdog/action-cpplint/pull/2)
 
 
 This action runs [cpplint](https://pypi.org/project/cpplint/) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve code review experience.
@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: srz-zumix/reviewdog-cpplint@master
+    - uses: reviewdog/action-cpplint@master
       with:
         github_token: ${{ secrets.github_token }}
         reporter: github-pr-review
