@@ -1,0 +1,40 @@
+name: 'Run cpplint with reviewdog'
+description: '🐶 Run cpplint with reviewdog on pull requests to enforce best practices'
+author: 'srz-zumix'
+
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN'
+    required: true
+  level:
+    description: |
+      Report level for reviewdog [info,warning,error].
+      Default is 'error'.
+    default: 'error'
+  reporter:
+    description: |
+      Reporter of reviewdog command [github-pr-check,github-pr-review].
+      Default is 'github-pr-check'.
+    default: 'github-pr-check'
+  flags:
+    description: |
+      List of arguments to send to cpplint.
+      Default is '--extensions=h,hpp,c,cpp,cc,cu,hh,ipp'.
+    default: '--extensions=h,hpp,c,cpp,cc,cu,hh,ipp'
+  targets:
+    description: |
+      List of file list arguments to send to cpplint.
+      Default is '--recursive .'.
+    default: '--recursive .'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
+    - ${{ inputs.level }}
+    - ${{ inputs.reporter }}
+    - ${{ inputs.flags }}
+    - ${{ inputs.targets }}
+branding:
+  icon: 'plus-circle'
+  color: 'blue'

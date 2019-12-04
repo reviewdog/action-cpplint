@@ -1,0 +1,18 @@
+name: Self test
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: clone
+      uses: actions/checkout@master
+      with:
+        fetch-depth: 2
+    - name: testbuild
+      run: |
+        cd testdata
+        g++ --version
+        g++ ./test.cpp -o test
+        ls
+        ./test

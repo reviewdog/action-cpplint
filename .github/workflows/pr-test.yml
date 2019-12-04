@@ -1,0 +1,15 @@
+name: PR test
+on: [pull_request]
+
+jobs:
+  cpplint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: clone
+      uses: actions/checkout@master
+    - uses: reviewdog/action-cpplint@master
+      with:
+        github_token: ${{ secrets.github_token }}
+        # reporter: github-pr-review
+        reporter: github-pr-check
+        flags: --linelength=50
