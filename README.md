@@ -42,7 +42,7 @@ Default is `--recursive .`.
 
 ```yml
 name: Reviewdog
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   cpplint:
