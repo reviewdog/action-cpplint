@@ -21,6 +21,11 @@ inputs:
       List of arguments to send to cpplint.
       Default is '--extensions=h,hpp,c,cpp,cc,cu,hh,ipp'.
     default: '--extensions=h,hpp,c,cpp,cc,cu,hh,ipp'
+  filter:
+    description: |
+      List of filter arguments to send to cpplint.
+      Default is empty.
+    default: ''
   targets:
     description: |
       List of file list arguments to send to cpplint.
@@ -34,6 +39,7 @@ runs:
     - ${{ inputs.level }}
     - ${{ inputs.reporter }}
     - ${{ inputs.flags }}
+    - ${{ inputs.filter }}
     - ${{ inputs.targets }}
 branding:
   icon: 'plus-circle'
