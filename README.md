@@ -31,6 +31,11 @@ Default is `github-pr-check`.
 Optional. List of arguments to send to cpplint.
 Default is `--extensions=h,hpp,c,cpp,cc,cu,hh,ipp`.
 
+### `filter`
+
+Optional. List of filter arguments to send to cpplint.
+Default is empty.
+
 ### `targets`
 
 Optional. List of file list arguments to send to cpplint.
@@ -54,4 +59,12 @@ jobs:
         github_token: ${{ secrets.github_token }}
         reporter: github-pr-review
         flags: --linelength=50 # Optional
+        filter: "-readability/braces\
+          ,-whitespace/braces\
+          ,-whitespace/comments\
+          ,-whitespace/indent\
+          ,-whitespace/newline\
+          ,-whitespace/operators\
+          ,-whitespace/parens\
+          " # Optional
 ```
