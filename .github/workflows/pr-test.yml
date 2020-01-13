@@ -13,11 +13,3 @@ jobs:
         # reporter: github-pr-review
         reporter: github-pr-check
         flags: --linelength=50
-        filter: "-readability/braces\
-          ,-whitespace/braces\
-          ,-whitespace/comments\
-          ,-whitespace/indent\
-          ,-whitespace/newline\
-          ,-whitespace/operators\
-          ,-whitespace/parens\
-          " # Optional
