@@ -12,6 +12,15 @@ public:
 private:
     int m_a;
 };
+class Hoge2
+{
+public:
+    Hoge2(int a) : m_a(a) {}
+public:
+    int getA() const { return m_a; }
+private:
+    int m_a;
+};
 
 int main(int, const char**)
 {
