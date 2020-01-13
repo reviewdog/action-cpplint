@@ -24,8 +24,8 @@ inputs:
   filter:
     description: |
       List of filter arguments to send to cpplint.
-      Default is empty.
-    default: ''
+      Default is '-build/include_order'.
+    default: '-build/include_order'
   targets:
     description: |
       List of file list arguments to send to cpplint.

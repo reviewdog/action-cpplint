@@ -34,7 +34,7 @@ Default is `--extensions=h,hpp,c,cpp,cc,cu,hh,ipp`.
 ### `filter`
 
 Optional. List of filter arguments to send to cpplint.
-Default is empty.
+Default is `-build/include_order`.
 
 ### `targets`
 
