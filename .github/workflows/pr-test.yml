@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: clone
       uses: actions/checkout@master
-    - uses: reviewdog/action-cpplint@.
+    - uses: ./
       with:
         github_token: ${{ secrets.github_token }}
         # reporter: github-pr-review
