@@ -24,8 +24,8 @@ inputs:
   filter:
     description: |
       List of filter arguments to send to cpplint.
-      Default is '-build/include_order'.
-    default: '-build/include_order'
+      Default is ''.
+    default: ''
   targets:
     description: |
       List of file list arguments to send to cpplint.
@@ -34,13 +34,6 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.github_token }}
-    - ${{ inputs.level }}
-    - ${{ inputs.reporter }}
-    - ${{ inputs.flags }}
-    - ${{ inputs.filter }}
-    - ${{ inputs.targets }}
 branding:
   icon: 'plus-circle'
   color: 'blue'
