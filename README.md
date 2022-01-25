@@ -26,6 +26,10 @@ Default is `error`.
 Reporter of reviewdog command [github-pr-check,github-pr-review].
 Default is `github-pr-check`.
 
+### `reviewdog-flags`
+Additional reviewdog flags.
+Default is `''`.
+
 ### `flags`
 
 Optional. List of arguments to send to cpplint.

@@ -16,6 +16,11 @@ inputs:
       Reporter of reviewdog command [github-pr-check,github-pr-review].
       Default is 'github-pr-check'.
     default: 'github-pr-check'
+  reviewdog_flags:
+    description: |
+      Additional reviewdog flags.
+      Default is ''.
+    default: ''
   flags:
     description: |
       List of arguments to send to cpplint.
