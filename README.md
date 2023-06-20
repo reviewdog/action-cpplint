@@ -26,7 +26,7 @@ Default is `error`.
 Reporter of reviewdog command [github-pr-check,github-pr-review].
 Default is `github-pr-check`.
 
-### `reviewdog-flags`
+### `reviewdog_flags`
 Additional reviewdog flags.
 Default is `''`.
 
@@ -43,7 +43,7 @@ Default is `--filter=""`.
 ### `targets`
 
 Optional. List of file list arguments to send to cpplint.
-Default is `--recursive .`.
+Default is `--recursive`.
 
 ## Example Usage
 
